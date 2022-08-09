@@ -1,0 +1,25 @@
+.app2{
+    border: 1px solid #000;
+    
+}
+.app2 .tab-bar{
+    
+    display: flex;
+}
+.app2 .tab-bar>li{
+    border: 1px solid #000;
+    width: 50%;
+    text-align: center;
+}
+/* 默认不可见 */
+.app2 .tab-content div{
+    display: none;
+}
+/* 点击后添加active类，变为可见 */
+.app2 .tab-content .active{
+    display: block;
+}
+/* 点击后添加bgc类，添加背景色 */
+.app2 .tab-bar .bgc{
+    background: yellow;
+}

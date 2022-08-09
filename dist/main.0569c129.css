@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after,*::before{
+    box-sizing: border-box;
+}
+
+ul,ol{
+    list-style: none;
+}body{
+    overflow: hidden;
+}
+
+.page{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page>section{
+    width: 50vw;
+    height: 50vh;
+}.app1{
+    border: 1px solid #000;
+    
+}
+.app1 button,.app1 .output{
+    margin: 1vw;
+}
+.app1 button{
+    padding:0 1vw;
+}.app2{
+    border: 1px solid #000;
+    
+}
+.app2 .tab-bar{
+    
+    display: flex;
+}
+.app2 .tab-bar>li{
+    border: 1px solid #000;
+    width: 50%;
+    text-align: center;
+}
+/* 默认不可见 */
+.app2 .tab-content div{
+    display: none;
+}
+/* 点击后添加active类，变为可见 */
+.app2 .tab-content .active{
+    display: block;
+}
+/* 点击后添加bgc类，添加背景色 */
+.app2 .tab-bar .bgc{
+    background: yellow;
+}.app3{
+    border: 1px solid #000;
+    padding: 1vw 1vw;
+}
+.app3 .square{
+    border: 1px solid blue;
+    margin: 1vw 1vw;
+    width: 10vw;
+    height: 10vw;
+    transition: 300ms linear;
+}
+
+.app3 .square.moveX{
+    transform: translateX(15vw);
+}.app4{
+    border: 1px solid #000;
+    
+}
+.app4 .circle{
+    border: 2px solid red;
+    width: 20vw;
+    height: 20vw;
+    margin: 2vw 2vw;
+    border-radius: 50%;
+    background: white;
+}
+
+@keyframes changeColor{
+    0%{
+        background: red;
+    }
+    100%{
+        background: blue;
+    }
+}
+.app4 .circle.active{
+    animation: changeColor 1s infinite alternate linear;
+}
